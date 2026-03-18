@@ -4,40 +4,112 @@ import type { SearchRequest, SearchResponse, Component } from "@/types/api";
 // Mock data for demonstration
 const mockComponents: Component[] = [
   {
-    title: "Service renewal notification",
-    url: "https://design-system.service.gov.uk/components/service-renewal",
+    title: "Search component",
+    url: "https://design-system.service.gov.uk/components/search",
     description:
-      "Use this component to help show users how to renew their service.",
+      "Use this component to help users search for information within your service.",
     parent: "GOV.UK Design System",
     accessability: "AA",
-    created_at: "2026-01-15T10:30:00",
-    updated_at: "2026-03-10T14:20:00",
+    created_at: "2025-10-12T09:00:00",
+    updated_at: "2026-03-15T11:30:00",
     has_research: true,
-    views: 245,
+    views: 892,
   },
   {
-    title: "Session expiry warning modal",
-    url: "https://design-system.service.gov.uk/components/session-expiry",
+    title: "Filter pattern",
+    url: "https://design-system.service.gov.uk/patterns/filter",
     description:
-      "Use this component to alert users when their session is about to expire.",
+      "Help users find what they're looking for by filtering results.",
+    parent: "GOV.UK Design System",
+    accessability: "AA",
+    created_at: "2025-11-05T14:20:00",
+    updated_at: "2026-02-20T10:15:00",
+    has_research: true,
+    views: 654,
+  },
+  {
+    title: "Search results",
+    url: "https://design.tax.service.gov.uk/patterns/search-results",
+    description:
+      "Display search results in a clear and accessible format for users.",
+    parent: "HMRC Design Patterns",
+    accessability: "AA",
+    created_at: "2025-12-01T08:45:00",
+    updated_at: "2026-03-10T16:00:00",
+    has_research: true,
+    views: 421,
+  },
+  {
+    title: "Site search",
+    url: "https://service-manual.nhs.uk/design-system/components/site-search",
+    description:
+      "Allow users to search across your entire service or website.",
+    parent: "NHS Design System",
+    accessability: "AAA",
+    created_at: "2025-09-18T11:30:00",
+    updated_at: "2026-01-25T13:45:00",
+    has_research: true,
+    views: 738,
+  },
+  {
+    title: "Autocomplete search",
+    url: "https://design-system.service.gov.uk/components/autocomplete",
+    description:
+      "Help users complete their search query with suggestions as they type.",
     parent: "GOV.UK Design System",
     accessability: "AA",
     created_at: "2025-11-20T09:15:00",
     updated_at: "2026-02-28T16:45:00",
     has_research: false,
-    views: 412,
+    views: 567,
   },
   {
-    title: "Timeout banner patterns",
-    url: "https://design.tax.service.gov.uk/patterns/timeout-banner",
+    title: "Advanced search form",
+    url: "https://design.homeoffice.gov.uk/patterns/advanced-search",
     description:
-      "Use this component to show timeout warnings and session management.",
+      "Enable users to refine searches with multiple criteria and filters.",
+    parent: "Home Office Design System",
+    accessability: "AA",
+    created_at: "2025-10-30T10:00:00",
+    updated_at: "2026-03-05T14:30:00",
+    has_research: false,
+    views: 345,
+  },
+  {
+    title: "Saved searches",
+    url: "https://moj-design-system.herokuapp.com/patterns/saved-searches",
+    description:
+      "Let users save and reuse their search queries for future sessions.",
+    parent: "Ministry of Justice Design System",
+    accessability: "AA",
+    created_at: "2025-12-10T13:20:00",
+    updated_at: "2026-03-12T09:50:00",
+    has_research: true,
+    views: 289,
+  },
+  {
+    title: "Search analytics",
+    url: "https://design.tax.service.gov.uk/patterns/search-analytics",
+    description:
+      "Track and analyze user search behavior to improve your service.",
     parent: "HMRC Design Patterns",
     accessability: "AA",
-    created_at: "2025-12-05T11:00:00",
-    updated_at: "2026-03-01T10:30:00",
+    created_at: "2025-11-15T15:40:00",
+    updated_at: "2026-02-18T11:25:00",
     has_research: false,
-    views: 189,
+    views: 198,
+  },
+  {
+    title: "Voice search",
+    url: "https://design-system.service.gov.uk/patterns/voice-search",
+    description:
+      "Allow users to search using voice input for improved accessibility.",
+    parent: "GOV.UK Design System",
+    accessability: "AAA",
+    created_at: "2025-12-20T10:10:00",
+    updated_at: "2026-03-08T15:20:00",
+    has_research: false,
+    views: 156,
   },
 ];
 
@@ -54,7 +126,7 @@ export async function POST(request: NextRequest) {
 
     // Mock AI response - in production, this would call an AI service
     const response: SearchResponse = {
-      message: `Found ${mockComponents.length} components relevant to: "${body.message}"`,
+      message: `Found ${mockComponents.length} reusable building blocks across government departments. The Ministry of Justice and HMRC both maintain mature implementations following GDS accessibility standards.`,
       components: mockComponents,
     };
 

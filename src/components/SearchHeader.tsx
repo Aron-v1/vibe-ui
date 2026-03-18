@@ -12,27 +12,33 @@ export default function SearchHeader({
   isSearching,
 }: SearchHeaderProps) {
   return (
-    <header className="bg-gradient-to-r from-purple-700 to-pink-600 text-white">
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <h1 className="text-sm font-semibold mb-8">GOV Route Library</h1>
+    <header className="bg-gradient-to-r from-purple-700 to-pink-600 text-white relative overflow-hidden">
+      {/* Decorative circles */}
+      <div className="absolute top-4 right-20 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center font-bold text-xl border-4 border-blue-300">
+        S
+      </div>
+      <div className="absolute top-32 right-12 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center font-bold text-xl border-4 border-blue-300">
+        S
+      </div>
 
-        <div className="mb-6">
-          <h2 className="text-3xl font-bold mb-2">
+      <div className="max-w-5xl mx-auto px-6 py-12 relative">
+        <div className="mb-8">
+          <h2 className="text-4xl font-bold mb-4 leading-tight">
             Describe a user need.
             <br />
-            Discover the right component.
+            Discover the right building block.
           </h2>
-          <p className="text-purple-100 text-sm">
-            Browse all your users are trying to do — or type in your
+          <p className="text-purple-100 text-base">
+            Write what your users are trying to do — in plain English.
             <br />
-            own query to find design components across Government.
+            AI maps it to reusable building blocks across Government.
           </p>
         </div>
 
         <div className="bg-white rounded-md p-1 flex flex-col sm:flex-row gap-2">
           <div className="flex-1">
             <label htmlFor="search" className="sr-only">
-              Search for a component
+              Search for a building block
             </label>
             <input
               id="search"
@@ -40,7 +46,7 @@ export default function SearchHeader({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && onSearch()}
-              placeholder="send an example of a service renewal notification"
+              placeholder="I want to help users find something in the service"
               className="w-full px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none rounded"
             />
           </div>

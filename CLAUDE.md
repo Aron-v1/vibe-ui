@@ -35,7 +35,9 @@ src/
     page.tsx        # Home page with search UI
     globals.css     # Global styles and Tailwind directives
   components/       # React components
+    AISummary.tsx        # AI-generated summary display
     ComponentCard.tsx    # Component display card
+    Filters.tsx          # Filter controls (feature flagged)
     SearchHeader.tsx     # Search header with gradient
   lib/              # Utility functions
     api.ts          # API client for search
@@ -51,6 +53,11 @@ Copy `.env.example` to `.env.local` and configure:
   - Leave empty to use built-in mock API at `/api/search`
   - Set to external URL (e.g., `https://api.example.gov.uk`) to use a different backend
   - Must be a `NEXT_PUBLIC_` variable to be accessible in client-side code
+
+- **NEXT_PUBLIC_ENABLE_FILTERS**: Feature flag for filters on results page
+  - Set to `true` to enable the filters component
+  - Set to `false` (default) to hide filters
+  - Useful for progressive feature rollout
 
 ## TypeScript Configuration
 
