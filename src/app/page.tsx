@@ -6,6 +6,7 @@ import SearchHeader from "@/components/SearchHeader";
 import AISummary from "@/components/AISummary";
 import Filters from "@/components/Filters";
 import { searchComponents } from "@/lib/api";
+import { getRuntimeConfig } from "@/lib/config";
 import type { Component } from "@/types/api";
 
 export default function Home() {
@@ -14,10 +15,14 @@ export default function Home() {
   const [components, setComponents] = useState<Component[]>([]);
   const [message, setMessage] = useState<string>("");
   const [error, setError] = useState<string>("");
+  const [filtersEnabled, setFiltersEnabled] = useState(false);
 
-  // Feature flag for filters
-  const filtersEnabled =
-    process.env.NEXT_PUBLIC_ENABLE_FILTERS === "true";
+  // Load runtime configuration on mount
+  useEffect(() => {
+    getRuntimeConfig().then((config) => {
+      setFiltersEnabled(config.enableFilters);
+    });
+  }, []);
 
   const handleSearch = async (query: string) => {
     setSearchQuery(query);
