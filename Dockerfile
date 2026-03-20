@@ -31,9 +31,6 @@ RUN npm run build
 FROM base AS runner
 WORKDIR /opt/app-root/src
 
-RUN mkdir -p  /tmp/nextjs/
-COPY testconfig /tmp/nextjs/.env
-
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
