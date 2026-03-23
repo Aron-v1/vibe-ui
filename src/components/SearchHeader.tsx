@@ -30,22 +30,9 @@ export default function SearchHeader({
                 <span>Search all design systems for reusable assets</span>
               </h1>
               <p className="govuk-body-m hero__description">
-                Find components, patterns and standards from across the British government.
+                Find components and patterns used across government.
               </p>
-              <figure className="hero__logo">
-                <img
-                  src="/assets/images/crest.svg"
-                  className="govuk-!-display-inline-block"
-                  alt="Ministry of Justice Crest"
-                  width={80}
-                  height={67}
-                />
-                <figcaption className="govuk-!-display-inline-block">
-                  <span>
-                    Curated by<br /> Ministry of Justice
-                  </span>
-                </figcaption>
-              </figure>
+            
             </div>
           </div>
         </div>
