@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 // Output environment variables and runtime info at startup
 console.log("\n╔═══════════════════════════════════════════════════════╗");
-console.log("║        GOV Route Library - Startup Information       ║");
+console.log("║        GOV Reuse Library - Startup Information       ║");
 console.log("╚═══════════════════════════════════════════════════════╝");
 
 console.log("\n📊 Runtime Information:");

@@ -7,7 +7,7 @@ import GovHeader from "@/components/GovHeader";
 import GovFooter from "@/components/GovFooter";
 
 export const metadata: Metadata = {
-  title: "GOV Route Library",
+  title: "GOV Reuse Library",
   description: "Describe a user need. Discover the right component.",
 };
 

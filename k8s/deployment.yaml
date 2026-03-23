@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: govuk-route-library
+  name: govuk-reuse-library
   labels:
-    app: govuk-route-library
+    app: govuk-reuse-library
     component: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: govuk-route-library
+      app: govuk-reuse-library
   template:
     metadata:
       labels:
-        app: govuk-route-library
+        app: govuk-reuse-library
         component: frontend
     spec:
       securityContext:
       containers:
       - name: frontend
-        image: govuk-route-library:latest
+        image: quay.io/noeloc/mojui:latest 
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -36,7 +36,7 @@ spec:
           value: "0.0.0.0"
         envFrom:
         - configMapRef:
-            name: govuk-route-library-config
+            name: govuk-reuse-library-config
         resources:
           requests:
             cpu: 100m
