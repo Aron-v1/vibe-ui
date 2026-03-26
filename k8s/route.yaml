@@ -1,0 +1,20 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: moj-route
+  namespace: moj-vector-data
+  labels:
+    app: govuk-route-library
+    component: frontend
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: govuk-route-library
+    weight: 100
+  port:
+    targetPort: 3000
+  tls:
+    termination: edge
+  wildcardPolicy: None
