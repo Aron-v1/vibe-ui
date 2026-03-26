@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: govuk-reuse-library-config
+  name: govuk-route-library-config
   labels:
-    app: govuk-reuse-library
+    app: govuk-route-library
 data:
   # Search API Configuration
   # Leave empty to use the built-in mock API at /api/search

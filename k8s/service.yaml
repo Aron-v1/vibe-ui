@@ -2,16 +2,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: govuk-reuse-library
+    app: govuk-route-library
     component: frontend
-  name: govuk-reuse-library
+  name: govuk-route-library
 spec:
   ports:
   - port: 3000
     protocol: TCP
     targetPort: 3000
   selector:
-    app: govuk-reuse-library
+    app: govuk-route-library
   sessionAffinity: None
   type: ClusterIP
-

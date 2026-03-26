@@ -1,26 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: govuk-reuse-library
+  name: govuk-route-library
   labels:
-    app: govuk-reuse-library
+    app: govuk-route-library
     component: frontend
+  annotations:
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"gov-route-library:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"frontend\")].image"}]'
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: govuk-reuse-library
+      app: govuk-route-library
   template:
     metadata:
       labels:
-        app: govuk-reuse-library
+        app: govuk-route-library
         component: frontend
     spec:
       securityContext:
       containers:
       - name: frontend
-        image: quay.io/noeloc/mojui:latest 
-        imagePullPolicy: IfNotPresent
+        image: image-registry.openshift-image-registry.svc:5000/moj-vector-data/gov-route-library:latest
+        imagePullPolicy: Always
         ports:
         - name: http
           containerPort: 3000
@@ -36,7 +38,7 @@ spec:
           value: "0.0.0.0"
         envFrom:
         - configMapRef:
-            name: govuk-reuse-library-config
+            name: govuk-route-library-config
         resources:
           requests:
             cpu: 100m
