@@ -12032,5 +12032,8 @@ span.moj-header__link:hover {
   border-color: rgb(0, 112, 60);
   background-color: rgb(243, 249, 243);
 }
+#gov-prototype-banner-bg {
+  background-color: var(--govuk-brand-colour, #1d70b8);
+}
 /*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */
 /*# sourceMappingURL=index.DSPCUEER.css.map */

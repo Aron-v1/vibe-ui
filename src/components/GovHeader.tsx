@@ -1,7 +1,9 @@
 import Link from "next/link";
+import GovPhaseBanner from "./GovPhaseBanner";
 
 export default function GovHeader() {
   return (
+    <>
     <nav
       className="govuk-service-navigation govuk-service-navigation--inverse"
       aria-label="Primary"
@@ -18,9 +20,14 @@ export default function GovHeader() {
               GOV Reuse Library
             </Link>
           </div>
-
         </div>
       </div>
     </nav>
+    <div id="gov-prototype-banner-bg">
+      <div className="govuk-width-container">
+        <GovPhaseBanner />
+      </div>
+    </div>
+    </>
   );
 }
