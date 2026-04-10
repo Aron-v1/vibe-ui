@@ -51,7 +51,7 @@ export default function Home() {
   };
 
   return (
-    <main className="govuk-main-wrapper">
+    <main className="govuk-main-wrapper" style={{ paddingTop: 0 }}>
       <SearchHeader
         onSearch={handleSearch}
         isSearching={isSearching}
@@ -60,6 +60,9 @@ export default function Home() {
 
       {components.length > 0 && (
         <section>
+          <div className="govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+            <p>Showing results for "{searchQuery}"</p>
+          </div>
           <div className="govuk-width-container">
             <h2 className="govuk-heading-l govuk-!-padding-top-7">Components</h2>
             <ul className="govuk-grid-row card-group">

@@ -2,7 +2,6 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import GovPhaseBanner from "@/components/GovPhaseBanner";
 import GovHeader from "@/components/GovHeader";
 import GovFooter from "@/components/GovFooter";
 
@@ -25,7 +24,6 @@ export default function RootLayout({
         <script src="/assets/js/gov-reuse.js" defer type="module" />
       </head>
       <body className="govuk-template__body antialiased">
-        <GovPhaseBanner />
         <GovHeader />
         {children}
         <GovFooter />

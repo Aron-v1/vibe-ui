@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GovPhaseBanner from "./GovPhaseBanner";
 
 interface SearchHeaderProps {
   onSearch: (query: string) => void;
@@ -37,6 +38,8 @@ export default function SearchHeader({
           </div>
         </div>
       </header>
+
+      <GovPhaseBanner />
 
       <div className="govuk-width-container govuk-!-padding-top-8 govuk-!-padding-bottom-5">
         <form onSubmit={handleSubmit}>

@@ -19,22 +19,6 @@ export default function GovHeader() {
             </Link>
           </div>
 
-          <ul className="govuk-service-navigation__list">
-            <li className="govuk-service-navigation__item">
-              <a className="govuk-service-navigation__link" href="#">
-                Search
-              </a>
-            </li>
-            <li className="govuk-service-navigation__item">
-              <a
-                className="govuk-service-navigation__link"
-                href="#"
-                aria-current="page"
-              >
-                About
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
