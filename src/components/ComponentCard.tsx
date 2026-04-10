@@ -59,7 +59,7 @@ export default function ComponentCard({ component }: ComponentCardProps) {
         )}
 
         {score && (
-          <p className="govuk-body-s">{(score * 100).toFixed(2)}% Match</p>
+          <p className="govuk-body-s">{Math.round(score * 100)}% match</p>
         )}
 
         <div className="card__tags">

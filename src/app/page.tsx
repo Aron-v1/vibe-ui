@@ -61,10 +61,10 @@ export default function Home() {
       {components.length > 0 && (
         <section>
           <div className="govuk-!-padding-top-4 govuk-!-padding-bottom-4">
-            <p>Showing results for "{searchQuery}"</p>
+            <p className="govuk-heading-s">Showing results for "{searchQuery}"</p>
           </div>
           <div className="govuk-width-container">
-            <h2 className="govuk-heading-l govuk-!-padding-top-7">Components</h2>
+            <h2 className="govuk-heading-l govuk-!-padding-top-7">Patterns and components</h2>
             <ul className="govuk-grid-row card-group">
               {components.map((component, index) => (
                 <li key={index} className="govuk-grid-column-one-third card-group__item">
